@@ -114,11 +114,5 @@ command -v ng &>/dev/null && source <(ng completion script)
 export FUNCTIONS_CORE_TOOLS_TELEMETRY_OPTOUT=1
 
 # --- Machine-specific overrides (gitignored) ---
-# Create ~/.bashrc.local for per-machine settings. Example contents:
-#
-#   export JAVA_HOME="/usr/lib/jvm/java-11-openjdk-amd64"
-#   [ -d "$JAVA_HOME" ] && export PATH="$JAVA_HOME/bin:$PATH"
-#
-#   export PATH="$PATH:$HOME/gremlin-console/bin"
-#
+# Copy bashrc.local.example to bashrc.local and fill in paths for this machine.
 [ -f "$HOME/.config/bash/bashrc.local" ] && . "$HOME/.config/bash/bashrc.local"
