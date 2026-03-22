@@ -1,0 +1,12 @@
+# Copy this file to bashrc.local and fill in values for this machine.
+# bashrc.local is gitignored and should never be committed.
+
+# --- Java ---
+export JAVA_HOME=/usr/lib/jvm/jdk1.8.0_202
+[ -d "$JAVA_HOME" ] && export PATH="$JAVA_HOME/bin:$PATH"
+
+# --- Gremlin Console ---
+[ -d "$HOME/gremlin-console" ] && export PATH="$PATH:$HOME/gremlin-console/bin"
+
+# --- npm global bin ---
+[ -d "$HOME/npm/global/bin" ] && export PATH="$HOME/npm/global/bin:$PATH"
