@@ -2,8 +2,8 @@
 
 # If not running interactively, don't do anything
 case $- in
-  *i*) ;;
-    *) return ;;
+*i*) ;;
+*) return ;;
 esac
 
 # --- Secrets (gitignored, per-machine) ---
@@ -20,14 +20,15 @@ shopt -s checkwinsize
 #shopt -s globstar
 
 # --- Prompt ---
-export PS1="\e[1;37;40m[\u@\W]\$\e[1;32m "
+PS1='\[\e[1;37m\][\u@\W]\$\[\e[0m\] '
 
-# Set xterm window title
 case "$TERM" in
-  xterm* | rxvt*)
-    PS1="\[\e]0;\u@\h: \w\a\]$PS1"
-    ;;
+xterm* | rxvt*)
+  PS1="\[\e]0;\u@\h: \w\a\]${PS1}"
+  ;;
 esac
+
+export PS1
 
 # --- Colors ---
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
