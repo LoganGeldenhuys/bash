@@ -16,6 +16,10 @@ HISTSIZE=10000
 HISTFILESIZE=20000
 
 # --- Shell options ---
+set -o vi
+stty -ixon
+bind '"jk":vi-movement-mode'
+bind 'set keyseq-timeout 200'
 shopt -s checkwinsize
 #shopt -s globstar
 
