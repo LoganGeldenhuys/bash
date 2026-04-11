@@ -18,8 +18,6 @@ HISTFILESIZE=20000
 # --- Shell options ---
 set -o vi
 stty -ixon
-bind '"jk":vi-movement-mode'
-bind 'set keyseq-timeout 200'
 shopt -s checkwinsize
 #shopt -s globstar
 
@@ -112,8 +110,8 @@ fi
 [ -f "$HOME/.asdf/asdf.sh" ] && . "$HOME/.asdf/asdf.sh"
 [ -f "$HOME/.asdf/completions/asdf.bash" ] && . "$HOME/.asdf/completions/asdf.bash"
 
-# --- Angular CLI completion ---
-command -v ng &>/dev/null && source <(ng completion script)
+# --- Angular CLI completion (disabled — no longer used) ---
+# command -v ng &>/dev/null && source <(ng completion script)
 
 # --- Misc ---
 export FUNCTIONS_CORE_TOOLS_TELEMETRY_OPTOUT=1
