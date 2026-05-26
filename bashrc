@@ -116,6 +116,10 @@ fi
 # --- Misc ---
 export FUNCTIONS_CORE_TOOLS_TELEMETRY_OPTOUT=1
 
+# opencode
+export PATH=/home/logan/.opencode/bin:$PATH
+alias oc=opencode
+
 # --- Machine-specific overrides (gitignored) ---
 # Copy bashrc.local.example to bashrc.local and fill in paths for this machine.
 [ -f "$HOME/.config/bash/bashrc.local" ] && . "$HOME/.config/bash/bashrc.local"
